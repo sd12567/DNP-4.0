@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Event Portal</title>
+</head>
+<body>
+     <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <div id="welcomeBanner">
+                <h1>Welcome to Our Community Portal!</h1>
+                <p>Special offer: <span style="color: red; font-weight: bold;">50% off</span> for first-time visitors!</p>
+                <p>Join our <span class="highlight">exciting events</span> this season.</p>
+            </div>
+        </section>
+    
+    <section id="events">
+        <h2>Past Community Events</h2>
+        <table>
+            <tr>
+                <td>
+                    <img src="l.webp" 
+                         alt="Community Festival" 
+                         title="Annual Community Festival" 
+                         class="event-image">
+                    <p>Annual Community Festival</p>
+                </td>
+                <td>
+                    <img src="https://via.placeholder.com/150x100?text=Event+2" 
+                         alt="Food Fair" 
+                         title="Local Food Fair" 
+                         class="event-image">
+                    <p>Local Food Fair</p>
+                </td>
+                <td>
+                    <img src="https://via.placeholder.com/150x100?text=Event+3" 
+                         alt="Art Show" 
+                         title="Community Art Show" 
+                         class="event-image">
+                    <p>Community Art Show</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://via.placeholder.com/150x100?text=Event+4" 
+                         alt="Sports Day" 
+                         title="Community Sports Day" 
+                         class="event-image">
+                    <p>Community Sports Day</p>
+                </td>
+                <td>
+                    <img src="https://via.placeholder.com/150x100?text=Event+5" 
+                         alt="Book Sale" 
+                         title="Annual Book Sale" 
+                         class="event-image">
+                    <p>Annual Book Sale</p>
+                </td>
+                <td>
+                    <img src="https://via.placeholder.com/150x100?text=Event+6" 
+                         alt="Cleanup" 
+                         title="Neighborhood Cleanup" 
+                         class="event-image">
+                    <p>Neighborhood Cleanup</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+    <section id="register">
+        <h2>Event Registration</h2>
+        <form id="registrationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required autofocus placeholder="Enter your full name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            
+            <label for="eventDate">Event Date:</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+            
+            <label for="eventType">Event Type:</label>
+            <select id="eventType" name="eventType">
+                <option value="">Select an event</option>
+                <option value="festival">Community Festival</option>
+                <option value="workshop">Educational Workshop</option>
+                <option value="sports">Sports Tournament</option>
+            </select>
+            
+            <label for="message">Special Requests:</label>
+            <textarea id="message" name="message" placeholder="Any special requirements?"></textarea>
+            
+            <button type="submit">Register</button>
+            
+            <output id="confirmation" style="display: block; margin-top: 10px;"></output>
+        </form>
+    </section>
+    
+     <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: contact@community.com</p>
+        </section>
+    
+    <script>
+        // Phone validation on blur
+        function validatePhone(input) {
+            const phoneRegex = /^\d{10}$/;
+            if (input.value && !phoneRegex.test(input.value)) {
+                alert('Please enter a valid 10-digit phone number');
+                input.focus();
+            }
+        }
+        
+        // Show event fee on change
+        function showEventFee(select) {
+            const feeDisplay = document.getElementById('feeDisplay');
+            const selectedOption = select.options[select.selectedIndex];
+            
+            if (selectedOption.value) {
+                const fee = selectedOption.text.match(/\$(\d+)/);
+                if (fee) {
+                    feeDisplay.textContent = `Fee: ${fee[0]}`;
+                }
+            }
+        }
+        
+        // Show confirmation on click
+        function showConfirmation() {
+            alert('Thank you for registering!');
+        }
+        
+        // Enlarge image on double click
+        function enlargeImage(img) {
+            if (img.style.width === '300px') {
+                img.style.width = '150px';
+            } else {
+                img.style.width = '300px';
+            }
+        }
+        
+        // Count characters in textarea
+        function countChars(textarea) {
+            document.getElementById('charCount').textContent = 
+                `${textarea.value.length} characters`;
+        }
+    </script>
+</body>
+</html>

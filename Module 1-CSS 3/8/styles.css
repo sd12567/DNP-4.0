@@ -1,0 +1,383 @@
+/* Exercise 1 - Basic Styles */
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Layout containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Style for the welcome banner */
+#welcomeBanner {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Style for event cards - reusable component */
+.eventCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Style for call-to-action buttons */
+.cta-button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #27ae60;
+}
+
+/* Universal selector for reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element selector for all h2 elements */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+/* ID selector for main header */
+#mainHeader {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Class selector for event cards */
+.eventCard {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Grouping selector for headings and paragraphs */
+h3, p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Descendant selector for paragraphs in event cards */
+.eventCard p {
+    color: #7f8c8d;
+}
+
+/* Child selector for direct children */
+nav > ul {
+    display: flex;
+    list-style: none;
+}
+
+/* Body with background image and fallback */
+body {
+    background-color: #ecf0f1; /* Fallback */
+    background-image: url('images/community-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #2c3e50;
+}
+
+/* Section headers with gradient */
+section h2 {
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+/* Text colors using HEX and RGBA */
+.primary-text {
+    color: #2c3e50; /* Dark blue */
+}
+
+.secondary-text {
+    color: #7f8c8d; /* Gray */
+}
+
+.highlight {
+    background-color: rgba(255, 255, 0, 0.3); /* Semi-transparent yellow */
+    padding: 2px 5px;
+}
+
+/* Alert box with RGBA transparency */
+.alert {
+    background-color: rgba(231, 76, 60, 0.9); /* Semi-transparent red */
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@700&display=swap');
+
+/* Base typography */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 25px 0 15px;
+}
+
+/* Text styling */
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.event-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2c3e50;
+}
+
+.date-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* Special text treatments */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.spaced-letters {
+    letter-spacing: 1.5px;
+}
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s;
+}
+
+a:link {
+    color: #3498db;
+}
+
+a:visited {
+    color: #9b59b6;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #e74c3c;
+}
+
+/* Navigation menu links */
+nav a {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    text-decoration: none;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+.bullet-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.list-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Navigation menu list */
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu li {
+    padding: 5px 0;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+/* Zebra striping */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #e8f4fc;
+}
+
+/* Special table cells */
+.highlight-cell {
+    background-color: #fffacd;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Compact table */
+.compact-table td, .compact-table th {
+    padding: 8px 10px;
+}
+
+
+/* Box model examples */
+.eventCard {
+    width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Form input styling */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Focus state */
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Visibility examples */
+.hidden {
+    visibility: hidden;
+}
+
+.removed {
+    display: none;
+}
+
+/* Spacing utilities */
+.margin-small {
+    margin: 10px;
+}
+
+.padding-large {
+    padding: 30px;
+}
+
+.border-thick {
+    border: 3px solid #3498db;
+}
+
+/* Layout containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-spacing {
+    margin: 40px 0;
+    padding: 20px;
+}
